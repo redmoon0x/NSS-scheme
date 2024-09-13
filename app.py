@@ -65,6 +65,10 @@ def process_image(file, cropped_file=None):
     # Save the combined image
     frame.save("static/output.png")
 
+    # Schedule the deletion of the locally saved image after 10 minutes
+    time.sleep(600)  # Wait for 10 minutes (600 seconds)
+    os.remove(output_path)
+
     # Return the path to the combined image
     return "output.png"
 
