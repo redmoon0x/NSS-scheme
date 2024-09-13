@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 36px;
+        color: #007bff;
+    }
+    .college-logo {
+        display: block;
+        margin: 0 auto 20px;
+        width: 100%;
+        height: auto;
+        max-width: 600px; /* Adjust as needed */
+    }
+    .college-name,
+    .event-name {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #9c4042;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    form {
+        text-align: center;
+        margin-top: 20px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+    .custom-file-upload {
+        display: inline-block;
+        padding: 12px 24px;
+        cursor: pointer;
+        border: 2px solid #007bff;
+        border-radius: 30px;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        color: #007bff;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 16px;
+        background-color: transparent;
+        outline: none;
+    }
+    .custom-file-upload:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+    button[type="submit"] {
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+        outline: none;
+    }
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    footer {
+        text-align: center;
+        color: #888;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    /* New CSS to handle image display */
+    img {
+        max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+        height: auto; /* Maintain the aspect ratio of the image */
+        display: block; /* Ensure proper spacing around the image */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+    </style>
+
+</head>
+<body>
+    <img src="/static/logo.png" alt="College Logo" class="college-logo">
+    <h2 class="event-name">Ek Ped Maa Ke Naam🌱</h2>
+    <h2 class="event-name">National Service Scheme (Unit 1&2)</h2>
+    <h1 class="header">Upload a Photo</h1>
+    <div class="container">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="image-upload" class="custom-file-upload">Choose Photo</label>
+            <input id="image-upload" type="file" name="image" accept="image/*">
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Dr. B.B. Hegde First Grade College, Kundapura</p>
+        <p>Designed by Deviprasad Shetty, Under the Guidance of Pranam B</p>
+        <p>Assistant Professor</p>
+        <p>Dept of Computer Applications</p>
+        
+    </footer>
+</body>
+</html>
