@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file
 from PIL import Image
 import os
 from urllib.parse import quote
+import time
 
 app = Flask(__name__)
 
