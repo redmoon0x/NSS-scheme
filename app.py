@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, send_file
 from PIL import Image
 import os
 from urllib.parse import quote
-import time
+
 
 app = Flask(__name__)
 
@@ -67,8 +67,7 @@ def process_image(file, cropped_file=None):
     frame.save("static/output.png")
 
     # Schedule the deletion of the locally saved image after 10 minutes
-    time.sleep(600)  # Wait for 10 minutes (600 seconds)
-    os.remove(output_path)
+    
 
     # Return the path to the combined image
     return "output.png"
